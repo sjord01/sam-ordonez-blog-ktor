@@ -11,3 +11,4 @@ fun Application.module() {
     configureTemplating()
     configureRouting()
 }
+
