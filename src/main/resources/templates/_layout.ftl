@@ -6,7 +6,7 @@
     </head>
     <body style="text-align: center; font-family: sans-serif">
     <img src="/static/sam-ordonez-logo.svg">
-    <h1>Kotlin Ktor Journal </h1>
+    <h1>Sam's Journal, using Kotlin and Ktor Framework</h1>
     <p><i>Powered by Ktor & Freemarker!</i></p>
     <hr>
     <#nested>

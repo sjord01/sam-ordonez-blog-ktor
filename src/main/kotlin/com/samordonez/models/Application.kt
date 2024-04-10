@@ -1,5 +1,22 @@
 package com.samordonez.models
 
+import org.jetbrains.exposed.sql.*
+import com.samordonez.dao.*
+
+data class Article(val id: Int, val title: String, val body: String)
+
+object Articles : Table() {
+    val id = integer("id").autoIncrement()
+    val title = varchar("title", 128)
+    val body = varchar("body", 1024)
+
+    override val primaryKey = PrimaryKey(id)
+}
+
+
+
+
+/*
 import com.samordonez.plugins.*
 import io.ktor.server.application.*
 import java.util.concurrent.atomic.AtomicInteger
@@ -26,3 +43,4 @@ val articles = mutableListOf(Article.newEntry(
     "The drive to develop!",
     "...it's what keeps me going."
 ))
+ */
