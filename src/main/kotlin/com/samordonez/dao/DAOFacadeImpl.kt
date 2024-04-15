@@ -43,8 +43,10 @@ class DAOFacadeImpl : DAOFacade {
     override suspend fun deleteArticle(id: Int): Boolean = dbQuery {
         Articles.deleteWhere { Articles.id eq id } > 0
     }
+
 }
 
+/*
 val dao: DAOFacade = DAOFacadeImpl().apply {
     runBlocking {
         if(allArticles().isEmpty()) {
@@ -52,3 +54,4 @@ val dao: DAOFacade = DAOFacadeImpl().apply {
         }
     }
 }
+ */

@@ -10,8 +10,7 @@ fun main(args: Array<String>) {
 }
 
 fun Application.module() {
-    DatabaseSingleton.init()
-    configureTemplating()
+    DatabaseSingleton.init(environment.config)
     configureRouting()
+    configureTemplating()
 }
-

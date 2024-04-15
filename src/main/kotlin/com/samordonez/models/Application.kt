@@ -1,9 +1,9 @@
 package com.samordonez.models
 
-import org.jetbrains.exposed.sql.*
-import com.samordonez.dao.*
+import org.jetbrains.exposed.sql.Table
+import java.io.Serializable
 
-data class Article(val id: Int, val title: String, val body: String)
+data class Article(val id: Int, val title: String, val body: String): Serializable
 
 object Articles : Table() {
     val id = integer("id").autoIncrement()
