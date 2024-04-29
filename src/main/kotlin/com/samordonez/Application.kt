@@ -5,9 +5,7 @@ import io.ktor.server.application.*
 import com.samordonez.dao.*
 
 
-fun main(args: Array<String>) {
-    io.ktor.server.netty.EngineMain.main(args)
-}
+fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 fun Application.module() {
     DatabaseSingleton.init(environment.config)

@@ -26,6 +26,7 @@ class DAOFacadeCacheImpl(
         .build(true)
 
     private val articlesCache = cacheManager.getCache("articlesCache", Int::class.javaObjectType, Article::class.java)
+
     override suspend fun allArticles(): List<Article> =
         delegate.allArticles()
 
