@@ -14,7 +14,7 @@ import java.io.*
 fun Application.configureRouting() {
     val dao: DAOFacade = DAOFacadeCacheImpl(
         DAOFacadeImpl(),
-        File(environment.config.property("storage.ehcacheFilePath").getString())
+        File(environment.config.property("ktor.storage.ehcacheFilePath").getString())
     ).apply {
         runBlocking {
             if(allArticles().isEmpty()) {
